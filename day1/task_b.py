@@ -22,9 +22,6 @@ with open(file) as lines:
         for idx, num in enumerate(numbers):
             if num in num_dict:
                 numbers[idx] = num_dict[num]
-        print(numbers)
         result += int(numbers[0] + numbers[-1])
 
 print(result)
-
-

@@ -1,7 +1,7 @@
 import re
 
 
-file = 'input.txt'
+file = 'in.txt'
 
 result = 0
 
