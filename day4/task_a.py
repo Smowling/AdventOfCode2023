@@ -9,13 +9,12 @@ result = 0
 for line in data:
     card_res = 0
     d = defaultdict(int)
-    line.replace('  ', ' ')
-    card = line[line.find(':'):].split(' ')
+    card = line[line.find(':'):].split()
     for key in card:
         d[key] += 1
         
     for key in d:
-        if key != '' and key != '|' and d[key] == 2:
+        if d[key] == 2:
             if card_res == 0:
                 card_res = 1
             else:
@@ -23,6 +22,3 @@ for line in data:
     result += card_res
 
 print(result)
-
-
-
