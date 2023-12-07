@@ -9,12 +9,8 @@ with open("input.txt") as file:
 
 types = {key: [] for key in ['11111', '2111', '221', '311', '32', '41', '5']}
 for hand in data:
-    wild = 0
     counts = Counter(hand[0])
-    if '1' in counts and len(counts) > 1:
-        wild = counts.pop('1')
     counts = sorted(counts.values(), reverse=True)
-    counts[0] += wild
     current_type = ''.join(str(ch) for ch in counts)
     types[current_type].append(hand)
 for key in types:
