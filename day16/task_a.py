@@ -3,12 +3,14 @@ from collections import deque
 with open("input.txt") as file:
     grid = file.read().splitlines()
 
+
 # row, col, deltarow, deltacol
 a = [(0, -1, 0, 1)]
 seen = set()
 queue = deque(a)
 
 while queue:
+    # row, col, deltarow, deltacol
     r, c, dr, dc = queue.popleft()
 
     r += dr
