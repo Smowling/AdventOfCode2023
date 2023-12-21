@@ -61,7 +61,7 @@ for _ in range(1000):
                 module.memory = "on" if module.memory == "off" else "off"
                 out_pulse = "high" if module.memory == "on" else "low"
                 for x in module.outputs:
-                    q.append((module.name, x, ))
+                    q.append((module.name, x, out_pulse))
         
         else:
             module.memory[origin] = pulse
