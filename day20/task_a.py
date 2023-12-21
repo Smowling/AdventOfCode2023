@@ -24,7 +24,7 @@ with open("input.txt") as file:
         left, right = line.strip().split(" -> ")
         outputs = right.split(", ")
         if left == "broadcaster":
-            broadcast_targets = right.split(".")
+            broadcast_targets = right.split()
         else:
             type = left[0]
             name = left[1:]
